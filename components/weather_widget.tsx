@@ -51,8 +51,12 @@ export default function WeatherWidget() {
         unit: "C",
       };
       setWeather(weatherData);
-    } catch (error) {
+    } catch (error:unknown) {
+      if (error instanceof Error) {
+        setError(error.message);
+      }else {
       setError("City not found. please try again.");
+      }
       setWeather(null);
     } finally {
       setIsLoading(false);
