@@ -1,5 +1,5 @@
 "use client";
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, FormEvent } from "react";
 import {
   Card,
   CardHeader,
@@ -138,4 +138,5 @@ export default function WeatherWidget() {
       </Card>
     </div>
   );
-}
+}  
+  
